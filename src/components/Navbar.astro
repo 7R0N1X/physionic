@@ -1,0 +1,45 @@
+---
+import '@fontsource-variable/montserrat';
+import MenuIcon from "../assets/MenuIcon.astro"
+import ArrowIcon from '../assets/ArrowIcon.astro';
+---
+
+<nav class="bg-white sm:bg-transparent">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+    <a href="#" class="flex items-center space-x-3">
+        <span class="self-center text-2xl font-bold text-[#252B42]">Physionic</span>
+    </a>
+
+    <button class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm lg:hidden" id="menu">
+        <MenuIcon />
+    </button>
+
+    <div class="hidden w-full lg:block lg:w-auto" id="navbar">
+      <ul class="font-semibold flex flex-col items-center gap-7 mt-20 mb-20 lg:mt-0 lg:mb-0 lg:flex-row lg:gap-10">
+        <li><a href="#" class="text-[#737373] text-xl sm:text-sm block">Inicio</a></li>
+        <li><a href="#" class="text-[#737373] text-xl sm:text-sm block">Productos</a></li>
+        <li><a href="#" class="text-[#737373] text-xl sm:text-sm block">Precios</a></li>
+        <li><a href="#" class="text-[#737373] text-xl sm:text-sm block">Contactos</a></li>
+      </ul>
+    </div>
+
+    <a href="#" target="_blank" class="hidden text-sm font-bold lg:flex lg:items-center capitalize lg:gap-3 bg-[#23A6F0] text-white rounded-md py-4 px-6">Obtener presupuesto <ArrowIcon class="size-5"/></a>
+  </div>
+</nav>
+
+<script>
+  const $menu = document.getElementById('menu')
+  const $navbar = document.getElementById('navbar')
+
+  $menu.addEventListener('click', () => {
+    $navbar.classList.toggle('hidden')
+    $navbar.classList.add('animate-slide-in-top')
+  })
+</script>
+
+<style>
+  a{
+    font-family: 'Montserrat Variable', sans-serif;
+  }
+</style>
