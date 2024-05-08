@@ -1,30 +1,28 @@
 ---
-import '@fontsource-variable/montserrat';
 import MenuIcon from "../assets/MenuIcon.astro"
 import ArrowIcon from '../assets/ArrowIcon.astro';
+import LinkButton from "./LinkButton.astro";
 ---
 
-<nav class="bg-white sm:bg-transparent">
+<nav class="bg-white lg:bg-transparent fixed w-screen">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
-    <a href="#" class="flex items-center space-x-3">
-        <span class="self-center text-2xl font-bold text-[#252B42]">Physionic</span>
-    </a>
+    <LinkButton href="#" title="" class="text-2xl font-bold text-[#252B42] lg:text-white">Physionic</LinkButton>
 
-    <button class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm lg:hidden" id="menu">
+    <button class="w-5 h-5  text-sm lg:hidden border" id="menu">
         <MenuIcon />
     </button>
 
     <div class="hidden w-full lg:block lg:w-auto" id="navbar">
-      <ul class="font-semibold flex flex-col items-center gap-7 mt-20 mb-20 lg:mt-0 lg:mb-0 lg:flex-row lg:gap-10">
-        <li><a href="#" class="text-[#737373] text-xl sm:text-sm block">Inicio</a></li>
-        <li><a href="#" class="text-[#737373] text-xl sm:text-sm block">Productos</a></li>
-        <li><a href="#" class="text-[#737373] text-xl sm:text-sm block">Precios</a></li>
-        <li><a href="#" class="text-[#737373] text-xl sm:text-sm block">Contactos</a></li>
+      <ul class="flex flex-col items-center gap-7 my-20 lg:my-0 lg:flex-row lg:gap-10 text-xl lg:text-sm font-semibold [&>li>a]:text-[#737373] [&>li>a]:lg:text-white">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Precios</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Contactos</a></li>
       </ul>
     </div>
 
-    <a href="#" target="_blank" class="hidden text-sm font-bold lg:flex lg:items-center capitalize lg:gap-3 bg-[#23A6F0] text-white rounded-md py-4 px-6">Obtener presupuesto <ArrowIcon class="size-5"/></a>
+    <LinkButton href="#" title="" class="hidden text-sm font-bold lg:flex lg:items-center capitalize lg:gap-3 bg-[#23A6F0] text-white rounded-md py-4 px-6">Solicitar cotización <ArrowIcon class="size-5"/></LinkButton>
   </div>
 </nav>
 
@@ -37,9 +35,3 @@ import ArrowIcon from '../assets/ArrowIcon.astro';
     $navbar.classList.add('animate-slide-in-top')
   })
 </script>
-
-<style>
-  a{
-    font-family: 'Montserrat Variable', sans-serif;
-  }
-</style>

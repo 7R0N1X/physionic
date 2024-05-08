@@ -1,0 +1,5 @@
+---
+const { href, target, title } = Astro.props;
+---
+
+<a href={href} target={target} title={title} {...Astro.props}> <slot /> </a>
