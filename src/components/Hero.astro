@@ -1,0 +1,82 @@
+---
+import LinkButton from './LinkButton.astro';
+---
+
+<section class="w-full lg:h-screen lg:flex lg:justify-center lg:items-center" id="container">
+  <section class="w-full max-w-screen-xl sm:flex lg:justify-between justify-center items-center px-4">
+
+    <section class="text-white py-20 flex flex-col gap-9 text-center lg:text-start my-16">
+      <h1 class="text-4xl lg:text-[58px] font-bold leading-tight lg:max-w-[509px]">Conoce el Mejor Hospital</h1>
+      <p class="text-xl lg:max-w-[509px]">Dominamos el tratamiento de grandes casos, pero también comprendemos las sutilezas de lo más pequeño.</p>
+  
+      <section class="flex flex-col items-center justify-center gap-5 lg:flex-row lg:justify-start">
+        <LinkButton href="#" title="" class="font-bold rounded-[37px] bg-[#23A6F0] text-white py-4 px-9 max-w-max">Solicitar cotización</LinkButton>
+        <LinkButton href="#" title="" class="font-bold rounded-[37px] bg-transparent border-2 text-white py-4 px-9 max-w-max">Más información</LinkButton>
+      </section>
+    </section>
+  
+    <section class="w-full sm:w-[350px]">
+      <form action="" class="flex flex-col gap-3 bg-white px-10 rounded-lg">
+        <h2 class="text-2xl font-bold text-center mt-10 mb-[28px]">Reservar cita</h2>
+        <label for="name">Nombre*</label>
+        <input type="text" id="name" name="user_name" placeholder="Nombre completo" />
+        <label for="mail">Email*</label>
+        <input type="email" id="mail" name="user_mail" placeholder="ejemplo@gmail.com"/>
+        <label for="ciudad">Ciudad*</label>
+        <select id="ciudad">
+          <option value="seleccione_una_opción">Seleccione una opción</option>
+          <option value="guayaquil">Guayaquil</option>
+          <option value="manta">Manta</option>
+          <option value="salinas">Salinas</option>
+          <option value="cuenca">Cuenca</option>
+          <option value="loja">Loja</option>
+          <option value="machala">Machala</option>
+          <option value="portoviejo">Portoviejo</option>
+        </select>
+        <label for="hora">Hora*</label>
+        <select id="hora">
+          <option value="seleccione_una_opción">Seleccione una opción</option>
+          <option value="9">09:00</option>
+          <option value="10">10:00</option>
+          <option value="11">11:00</option>
+          <option value="12">12:00</option>
+          <option value="14">14:00</option>
+          <option value="15">15:00</option>
+          <option value="16">16:00</option>
+          <option value="17">17:00</option>
+        </select>
+        <LinkButton href="#" title="" class="bg-[#23A6F0] rounded px-10 py-4 text-white font-bold mb-10 mt-5 text-center">Reservar cita</LinkButton>
+      </form>
+    </section>
+  </section>
+
+</section>
+
+<style>
+  #container{
+    background: url("../assets/hero-bg.webp") no-repeat top center/cover;
+  }
+
+  @media (max-width: 640px) {
+  #container {
+    background: url("../assets/hero-bg.webp") no-repeat top center/cover;
+    background-position: -800px -40px;
+  }
+}
+
+
+  label{
+    font-size: 14px;
+    font-weight: bold;
+    color: #252B42;
+  }
+
+  input, select{
+    font-size: 14px;
+    padding: 0 20px;
+    border-radius: 5px;
+    height: 50px;
+    background-color: #f9f9f9;
+    border: 1px solid #BDBDBD;
+  }
+</style>
