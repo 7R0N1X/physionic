@@ -2,10 +2,10 @@
 import LinkButton from './LinkButton.astro';
 ---
 
-<section class="w-full sm:h-screen lg:flex lg:justify-center lg:items-center" id="container">
+<section class="w-full sm:h-screen lg:flex lg:justify-center lg:items-center pt-[90px]" id="container">
   <section class="w-full h-full max-w-screen-xl flex flex-col sm:flex-row justify-between items-center px-4">
 
-    <section class="text-white py-20 flex flex-col gap-9 text-center sm:text-start my-16">
+    <section class="text-white sm:h-full py-20 flex flex-col justify-center gap-9 text-center sm:text-start my-16">
       <h1 class="text-4xl lg:text-[58px] font-bold leading-tight lg:max-w-[509px]">Conoce el Mejor Hospital</h1>
       <p class="text-xl lg:max-w-[509px]">Dominamos el tratamiento de grandes casos, pero también comprendemos las sutilezas de lo más pequeño.</p>
   
@@ -15,16 +15,16 @@ import LinkButton from './LinkButton.astro';
       </section>
     </section>
   
-    <section class="w-full sm:w-[350px] mb-20">
-      <form action="" class="flex flex-col gap-3 bg-white px-10 rounded-lg">
+    <section class="w-full sm:w-[350px] h-full my-auto mb-20 flex justify-center items-center">
+      <form action="" class="flex flex-col gap-3 bg-white w-full px-10 rounded-lg">
         <h2 class="text-2xl font-bold text-center mt-10 mb-[28px]">Reservar cita</h2>
-
+    
         <label for="name">Nombre*</label>
         <input type="text" id="name" name="user_name" placeholder="Nombre completo" />
-
+    
         <label for="mail">Email*</label>
         <input type="email" id="mail" name="user_mail" placeholder="ejemplo@gmail.com"/>
-
+    
         <label for="ciudad">Ciudad*</label>
         <select id="ciudad">
           <option value="seleccione_una_opción">Seleccione una opción</option>
@@ -36,7 +36,7 @@ import LinkButton from './LinkButton.astro';
           <option value="machala">Machala</option>
           <option value="portoviejo">Portoviejo</option>
         </select>
-
+    
         <label for="hora">Hora*</label>
         <select id="hora">
           <option value="seleccione_una_opción">Seleccione una opción</option>
@@ -49,10 +49,10 @@ import LinkButton from './LinkButton.astro';
           <option value="16">16:00</option>
           <option value="17">17:00</option>
         </select>
-
         <LinkButton href="#" title="" class="bg-[#23A6F0] rounded px-10 py-4 text-white font-bold mb-10 mt-5 text-center">Reservar cita</LinkButton>
       </form>
     </section>
+    
   </section>
 
 </section>
