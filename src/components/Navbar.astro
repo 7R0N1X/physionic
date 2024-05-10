@@ -1,16 +1,16 @@
 ---
-import MenuIcon from "../assets/MenuIcon.astro"
-import ArrowIcon from '../assets/ArrowIcon.astro';
+import MenuIcon from "../assets/MenuIcon.astro";
+import ArrowIcon from "../assets/ArrowIcon.astro";
 import LinkButton from "./LinkButton.astro";
 ---
 
-<nav class="bg-white lg:bg-transparent fixed top-0 w-screen">
+<nav class="bg-white lg:bg-transparent fixed top-0 w-screen" id="nav">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
-    <LinkButton href="#" title="" class="text-2xl font-bold text-[#252B42] lg:text-white">Physionic</LinkButton>
+    <LinkButton href="#" title="" class="text-2xl font-bold text-[#252B42] lg:text-white" id="logo">Physionic</LinkButton>
 
     <button class="w-5 h-5 text-sm lg:hidden" id="menu">
-        <MenuIcon />
+      <MenuIcon />
     </button>
 
     <div class="hidden w-full lg:block lg:w-auto" id="navbar">
@@ -22,16 +22,39 @@ import LinkButton from "./LinkButton.astro";
       </ul>
     </div>
 
-    <LinkButton href="#" title="" class="hidden text-sm font-bold lg:flex lg:items-center capitalize lg:gap-3 bg-[#23A6F0] text-white rounded-md py-4 px-6">Solicitar cotización <ArrowIcon class="size-5"/></LinkButton>
+    <LinkButton href="#" title="" class="hidden text-sm font-bold lg:flex lg:items-center capitalize lg:gap-3 bg-[#23A6F0] text-white rounded-md py-4 px-6">Solicitar cotización <ArrowIcon class="size-5" /></LinkButton>
   </div>
 </nav>
 
 <script>
-  const $menu = document.getElementById('menu')
-  const $navbar = document.getElementById('navbar')
+// Obtener elementos del DOM
+const $menu = document.getElementById("menu");
+const $navbar = document.getElementById("navbar");
+const $nav = document.getElementById("nav");
+const $logo = document.getElementById("logo");
+const $ul = document.querySelector("ul");
 
-  $menu.addEventListener('click', () => {
-    $navbar.classList.toggle('hidden')
-    $navbar.classList.add('animate-slide-in-top')
-  })
+// Función para cambiar el estilo de la barra de navegación al hacer scroll
+function changeNavbarStyle() {
+  const scrollPosition = window.scrollY;
+  const isScrolled = scrollPosition > 0;
+
+  $nav.classList.toggle("lg:bg-transparent", !isScrolled);
+  $nav.classList.toggle("lg:bg-white", isScrolled);
+
+  $logo.classList.toggle("lg:text-white", !isScrolled);
+  $logo.classList.toggle("lg:text-[#252B42]", isScrolled);
+
+  $ul.classList.toggle("[&>li>a]:lg:text-black", isScrolled);
+}
+
+// Función para manejar el evento de clic en el menú
+function toggleMenu() {
+  $navbar.classList.toggle("hidden");
+  $navbar.classList.toggle("animate-slide-in-top");
+}
+
+// Agregar eventos
+$menu.addEventListener("click", toggleMenu);
+window.addEventListener("scroll", changeNavbarStyle);
 </script>
