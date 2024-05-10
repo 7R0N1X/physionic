@@ -1,0 +1,30 @@
+---
+import { SERVICIOS } from "../js/servicios";
+import LinkButton from "./LinkButton.astro";
+---
+
+{
+  SERVICIOS.map(({ title, options, link }) => (
+    <article class="w-full sm:w-[328px] h-[385px] bg-[#C3E4FF] rounded-xl relative z-10">
+      <header class="flex gap-4 items-center p-7 h-32">
+        <img src="/icons/icn-circle.webp" alt={title} />
+        <h3 class="font-bold text-base text-[#252B42]">{title}</h3>
+      </header>
+      <section class="bg-white rounded-xl p-7 h-[253px] border border-[#A9D6FF] absolute bottom-0 left-0 right-0">
+        <ul class="[&>li]:text-[#737373] [&>li]:font-semibold [&>li]:py-1">
+          {options.map((option) => (
+            <li>{option}</li>
+          ))}
+        </ul>
+        <LinkButton href={link} class="font-semibold text-sm text-[#23A6F0] py-4 inline-block">Saber más</LinkButton>
+      </section>
+    </article>
+  ))
+}
+
+<style>
+  li::before {
+    content: "-";
+    margin-right: 5px;
+  }
+</style>
