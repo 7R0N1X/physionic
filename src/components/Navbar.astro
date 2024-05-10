@@ -45,7 +45,8 @@ function changeNavbarStyle() {
   $logo.classList.toggle("lg:text-white", !isScrolled);
   $logo.classList.toggle("lg:text-[#252B42]", isScrolled);
 
-  $ul.classList.toggle("[&>li>a]:lg:text-black", isScrolled);
+  $ul.classList.toggle("[&>li>a]:lg:text-white", !isScrolled);
+  $ul.classList.toggle("[&>li>a]:lg:text-[#252B42]", isScrolled);
 }
 
 // Función para manejar el evento de clic en el menú
