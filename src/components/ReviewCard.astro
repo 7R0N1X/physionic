@@ -1,0 +1,22 @@
+---
+import { REVIEWS } from "../js/reviews";
+---
+
+{
+  REVIEWS.map(({ name, review, profile }) => (
+  <article class="w-full h-56 sm:min-w-[330px] sm:min-h-60 bg-white border borde-[#DEDEDE] rounded-md py-8 px-9 flex flex-col justify-between gap-1 transition sm:hover:scale-105 sm:hover:shadow-md">
+      <picture class="flex gap-[5px]">
+        <img src="/icons/star-fill.webp" alt="" />
+        <img src="/icons/star-fill.webp" alt="" />
+        <img src="/icons/star-fill.webp" alt="" />
+        <img src="/icons/star-fill.webp" alt="" />
+        <img src="/icons/star.webp" alt="" />
+      </picture>
+      <p class="text-sm text-[#737373] font-semibold leading-6">{review}</p>
+      <picture class="flex items-center gap-3">
+        <img src={profile} alt="" class="size-[50px] rounded-full" />
+        <h3 class="text-sm text-[#737373] font-semibold">{name}</h3>
+      </picture>
+    </article>
+  ))
+}
