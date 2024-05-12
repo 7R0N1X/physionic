@@ -42,6 +42,9 @@ function changeNavbarStyle() {
   $nav.classList.toggle("lg:bg-transparent", !isScrolled);
   $nav.classList.toggle("lg:bg-white", isScrolled);
 
+  $nav.classList.toggle("shadow-none", !isScrolled);
+  $nav.classList.toggle("shadow-md", isScrolled);
+
   $logo.classList.toggle("lg:text-white", !isScrolled);
   $logo.classList.toggle("lg:text-[#252B42]", isScrolled);
 

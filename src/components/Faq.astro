@@ -1,11 +1,10 @@
 ---
+import Container from "./Container.astro"
 import FaqAccordion from "./FaqAccordion.astro"
 ---
 
-<section class="w-full py-20 bg-[#FAFAFA] max-sm:px-4">
-  <h2 class="text-4xl font-bold text-center text-[#252B42] mb-5">FAQ</h2>
-  <p class="sm:text-lg text-center text-[#737373] mb-14">Encuentra respuestas a las preguntas más comunes sobre nuestros servicios.</p>
+<Container class="bg-[#FAFAFA]" title="FAQ" description="Encuentra respuestas a las preguntas más comunes sobre nuestros servicios.">
   <section class="w-full max-w-screen-xl mx-auto flex flex-col flex-wrap sm:flex-row justify-center items-center gap-7">
     <FaqAccordion />
   </section>
-</section>
+</Container>
