@@ -1,0 +1,62 @@
+---
+import TiktokIcon from "../assets/social-icons/TiktokIcon.astro"
+import InstagramIcon from "../assets/social-icons/InstagramIcon.astro"
+import XIcon from "../assets/social-icons/XIcon.astro"
+---
+
+<footer class="bg-white w-full">
+  <section class="max-w-screen-xl mx-auto py-20 flex max-lg:flex-col justify-between px-4 text-sm flex-wrap">
+
+    <!-- Contacto -->
+    <section class="w-72">
+      <h3 class="text-xl font-bold text-[#252B42] mb-5">Contacto</h3>
+      <address class="not-italic [&>p]:mb-3 text-[#737373]">
+        <p class="font-semibold">Para emergencias, llámenos o visite nuestra ubicación</p>
+        <p class="font-semibold">Teléfono: <a href="tel:1234567890" class="font-normal hover:underline">(052) 456-7890</a></p>
+        <p class="font-semibold">Email: <a href="mailto:info.tronix.dev@gmail.com" class="font-normal hover:underline">info.tronix.dev@gmail.com</a></p>
+      </address>
+      <section class="flex gap-5 text-[#252B42]">
+        <TiktokIcon class="size-5 transition hover:scale-110 cursor-pointer" />
+        <InstagramIcon class="size-5 transition hover:scale-110 cursor-pointer" />
+        <XIcon class="size-5 transition hover:scale-110 cursor-pointer" />
+      </section>
+    </section>
+
+    <!-- Información del Hospital -->
+    <section class="w-72">
+      <h3 class="text-xl font-bold text-[#252B42] mb-5 max-lg:mt-5">Información del Hospital</h3>
+      <ul class="[&>li>a]:text-[#737373] [&>li>a]:font-semibold">
+        <li class="mb-2"><a href="#" class="hover:underline">Sobre Nosotros</a></li>
+        <li class="mb-2"><a href="#" class="hover:underline">Carreras</a></li>
+        <li class="mb-2"><a href="#" class="hover:underline">Estamos Contratando</a></li>
+        <li><a href="#" class="hover:underline">Blog</a></li>
+      </ul>
+    </section>
+
+    <!-- Servicios -->
+    <section class="w-72">
+      <h3 class="text-xl font-bold text-[#252B42] mb-5 max-lg:mt-5">Servicios</h3>
+      <ul class="[&>li>a]:text-[#737373] [&>li>a]:font-semibold">
+        <li class="mb-2"><a href="#" class="hover:underline">Urgencias Médicas</a></li>
+        <li class="mb-2"><a href="#" class="hover:underline">Atención Oncológica</a></li>
+        <li class="mb-2"><a href="#" class="hover:underline">Consultas de Salud</a></li>
+        <li><a href="#" class="hover:underline">Soporte 24/7</a></li>
+      </ul>
+    </section>
+
+    <!-- Recursos para pacientes -->
+    <section class="">
+      <h3 class="text-xl font-bold text-[#252B42] mb-5 max-lg:mt-5">Recursos para Pacientes</h3>
+      <ul class="[&>li>a]:text-[#737373] [&>li>a]:font-semibold">
+        <li class="mb-2"><a href="#" class="hover:underline">Guía para Pacientes</a></li>
+        <li class="mb-2"><a href="#" class="hover:underline">Información de Seguros</a></li>
+        <li class="mb-2"><a href="#" class="hover:underline">Consejos de Salud</a></li>
+        <li><a href="#" class="hover:underline">Preguntas Frecuentes</a></li>
+    </section>
+
+  </section>
+  <section class="w-full mx-auto bg-[#FAFAFA] py-4 flex max-sm:flex-col justify-center items-center gap-1">
+    <p class="text-center font-semibold text-[#252B42] text-sm">Hecho con &hearts; por 7R0N1X <span class="max-sm:hidden">|</span></p>
+    <p class="text-center font-semibold text-[#252B42] text-sm">Todos los derechos reservados</p>
+  </section>
+</footer>
