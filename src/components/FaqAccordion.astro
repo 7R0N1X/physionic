@@ -4,9 +4,9 @@ import { FAQ } from "../js/faq";
 
 {
   FAQ.map(({ question, answer }) => (
-    <details class="w-full sm:min-w-[333px] sm:max-w-[380px] p-6 bg-white rounded-lg cursor-pointer">
+    <details class="w-full sm:min-w-[333px] sm:max-w-[380px] p-6 bg-[#FAFAFA] rounded-lg cursor-pointer">
       <summary class="text-base text-[#252B42] font-bold">{question}</summary>
-      <p class="text-sm text-[#737373] font-semibold my-1">{answer}</p>
+      <p class="text-sm text-[#737373] font-semibold mt-2 py-2">{answer}</p>
     </details>
   ))
 }
