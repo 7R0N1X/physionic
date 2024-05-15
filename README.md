@@ -1,7 +1,5 @@
 ### Screenshot
-![Screenshot](https://github.com/7R0N1X/physionic/assets/92642223/c04dcfbc-472a-4312-99e9-3db957a64387)
-
-
+![Screenshot](https://github.com/7R0N1X/physionic/assets/92642223/94f9cb5d-8bab-4eac-a129-2d382755a1ac)
 
 ### Prerequisitos
 
