@@ -1,16 +1,20 @@
 ---
 import { REVIEWS } from "../js/reviews";
+
+import StarFill from "../../public/icons/star-fill.webp"
+import Star from "../../public/icons/star.webp"
+import { Image } from "astro:assets";
 ---
 
 {
   REVIEWS.map(({ name, review, profile }) => (
   <article class="w-full h-56 sm:min-w-[330px] sm:min-h-60 bg-white border borde-[#DEDEDE] rounded-md py-8 px-9 flex flex-col justify-between gap-1 transition sm:hover:scale-105 sm:hover:shadow-md">
       <picture class="flex gap-[5px]">
-        <img src="/icons/star-fill.webp" alt="" />
-        <img src="/icons/star-fill.webp" alt="" />
-        <img src="/icons/star-fill.webp" alt="" />
-        <img src="/icons/star-fill.webp" alt="" />
-        <img src="/icons/star.webp" alt="" />
+        <Image src={StarFill} alt="Icono Star" class="size-5"/>
+        <Image src={StarFill} alt="Icono Star" class="size-5"/>
+        <Image src={StarFill} alt="Icono Star" class="size-5"/>
+        <Image src={StarFill} alt="Icono Star" class="size-5"/>
+        <Image src={Star} alt="Icono Star" class="size-5"/>
       </picture>
       <p class="text-sm text-[#737373] font-semibold leading-6">{review}</p>
       <picture class="flex items-center gap-3">

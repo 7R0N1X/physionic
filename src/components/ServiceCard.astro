@@ -1,13 +1,16 @@
 ---
 import { SERVICIOS } from "../js/servicios";
 import LinkButton from "./LinkButton.astro";
+
+import IcnCircle from "../../public/icons/icn-circle.webp"
+import { Image } from "astro:assets";
 ---
 
 {
   SERVICIOS.map(({ title, options, link }) => (
     <article class="w-full sm:min-w-[328px] sm:max-w-[328px] h-[385px] bg-[#C3E4FF] rounded-xl relative z-10">
       <header class="flex gap-4 items-center p-7 h-32">
-        <img src="/icons/icn-circle.webp" alt={title} />
+        <Image src={IcnCircle} alt={title} class="size-[72px]"/>
         <h3 class="font-bold text-base text-[#252B42]">{title}</h3>
       </header>
       <section class="bg-white rounded-xl p-7 h-[253px] border border-[#A9D6FF] absolute bottom-0 left-0 right-0">
