@@ -58,14 +58,8 @@ import LinkButton from './LinkButton.astro';
 </section>
 
 <style>
-  #container{
-    background: url("../assets/hero-bg.webp") no-repeat top center/cover;
-  }
-
-  @media (max-width: 640px) {
-  #container {
-    background-position: -900px -40px;
-  }
+#container {
+  background: url("/hero-bg.webp") no-repeat top center/cover, linear-gradient(to right, white, #23a6f0);
 }
 
   label{
