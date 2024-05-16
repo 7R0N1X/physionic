@@ -1,8 +1,5 @@
----
-import Container from "./Container.astro"
----
-
-<Container class="bg-[#252B42] text-white" title="Suscríbete a Nuestro Boletín de Salud">
+<section class={`bg-[#252B42] text-white w-full py-20 max-sm:px-4`}>
+  <h2 class="text-4xl font-bold text-center mb-5">Suscríbete <span class="hidden sm:inline-block">a Nuestro Boletín de Salud</span></h2>
   <section class="w-full max-w-screen-xl mx-auto sm:p-4">
     <form class="flex justify-center">
       <label for="email" class="sr-only">Correo Electrónico</label>
@@ -10,4 +7,4 @@ import Container from "./Container.astro"
       <button type="submit" class="bg-[#23A6F0] text-white px-6 rounded-r-md hover:bg-blue-600">Suscribirse</button>
     </form>
   </section>
-</Container>
+</section>
